@@ -7,4 +7,27 @@
   <%= link_to "Back to customers", customers_path %>
 
   <%= button_to "Destroy this customer", @customer, method: :delete %>
+
+  <div id= "orders">
+    <% if @customer.orders.present? %>
+        <h1> Customer's Personal Orders </h1>
+
+        <% @customer.orders.each do |order| %>
+          <%= render order%>
+          <p>
+          <%= link_to "Show Order", order %>
+          </p>
+
+          <p>
+          <%= link_to "Edit Order", edit_order_path(order) %>
+          </p>
+
+          <p>
+          <%= link_to "Delete this Order", data: {"turbo-method": :delete} %>
+          </p>
+
+        <% end %>
+    <% end %>
+    </div>
+
 </div>

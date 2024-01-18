@@ -15,11 +15,11 @@
   <tbody>
     <% @customers.each do |customer| %>
       <tr>
-        <td><%= customer.full_name %></td>
+        <td><%= icon('fa-solid', 'user')%> <%= customer.full_name %></td>
         <td><%= customer.orders.count %></td>
         <td><%= button_to 'Show', customer, method: :get, class: "btn btn-success" %></td>
         <td><%= button_to 'Edit', edit_customer_path(customer), method: :get, class: "btn btn-success" %></td>
-        <td><%= button_to "Delete", customer, method: :delete, class: "btn btn-success", data: { turbo_confirm: "Are you sure?"} %></td>
+        <td><%= button_to 'Delete', customer, method: :delete, class: "btn btn-success", data: { turbo_confirm: "Are you sure?"} %> </td>
       </tr>
     <% end %>
   </tbody>

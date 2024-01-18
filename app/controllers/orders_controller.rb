@@ -21,6 +21,7 @@ class OrdersController < ApplicationController
         @order = Order.new(order_params)
 
         if @order.save
+            flash.notice = "The order was created successfully"
             redirect_to @order
         else
             render :new

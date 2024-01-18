@@ -30,17 +30,7 @@ class CustomersController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
-    # @customer = Customer.new(customer_params)
-
-    # respond_to do |format|
-    #   if @customer.save
-    #     format.html { redirect_to customer_url(@customer), notice: "Customer was successfully created." }
-    #     format.json { render :show, status: :created, location: @customer }
-    #   else
-    #     format.html { render :new, status: :unprocessable_entity }
-    #     format.json { render json: @customer.errors, status: :unprocessable_entity }
-    #   end
-    # end
+    
   end
 
   # PATCH/PUT /customers/1 or /customers/1.json
@@ -51,15 +41,7 @@ class CustomersController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
-    # respond_to do |format|
-    #   if @customer.update(customer_params)
-    #     format.html { redirect_to customer_url(@customer), notice: "Customer was successfully updated." }
-    #     format.json { render :show, status: :ok, location: @customer }
-    #   else
-    #     format.html { render :edit, status: :unprocessable_entity }
-    #     format.json { render json: @customer.errors, status: :unprocessable_entity }
-    #   end
-    # end
+    
   end
 
   # DELETE /customers/1 or /customers/1.json

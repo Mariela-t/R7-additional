@@ -11,9 +11,36 @@
   </head>
 
   <body>
+  <div class="banner-background p-5 text-center">
+  <h1>Customers and Orders</h1>
+  <p>This is a simple application that associated orders with customers</p> 
+  </div>
+  
+  <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+    <div class="btn-group">
+      <button class="btn dropdown-toggle" data-bs-toggle="dropdown" > Customers 
+      </button>
+      <div class="dropdown-menu">
+      <a class="dropdown-item" href="/customers">Customer List</a>
+      <a class="dropdown-item" href="/customers/new">New Customer</a>
+      </div>
+      </div>
+    </div>
+    <div class="btn-group">
+      <button class="btn dropdown-toggle" data-bs-toggle="dropdown" > Orders 
+      </button>
+      <div class="dropdown-menu">
+      <a class="dropdown-item" href="/orders/new">New Orders</a>
+      <a class="dropdown-item" href="/orders">Order List</a>
+      </div>
+      </div>
+    </div>
+  </nav>
   <% if flash[:alert].present? %>
-    <p class="my_alert"><%= flash[:alert] %></p>
+    <p class="alert alert-warning"><%= flash[:alert] %></p>
 <% end %>
-    <%= yield %>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -3,10 +3,10 @@
 <%= render @customer %>
 
 <div>
-  <%= link_to "Edit this customer", edit_customer_path(@customer) %> |
-  <%= link_to "Back to customers", customers_path %>
+  <%= link_to "Edit this customer", edit_customer_path(@customer), class: "btn btn-success" %> 
+  <%= link_to "Back to customers", customers_path, class: "btn btn-success" %>
 
-  <%= button_to "Destroy this customer", @customer, method: :delete %>
+  <%= button_to "Delete this customer", @customer, method: :delete, class: "btn btn-success" %>
 
   <div id= "orders">
     <% if @customer.orders.present? %>

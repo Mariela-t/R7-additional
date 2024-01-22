@@ -13,6 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap";
+ @import "font-awesome";
+
+ @font-face {
+  font-family: 'KGRedHands';
+  src: url('KGRedHands.ttf');
+}
+
 .my_alert {
   color: red;
+}
+
+:root {
+   --bs-body-bg: #fdbbd5;
+}
+
+.banner-background {
+  background-image: asset-url('flowers.jpg');
+  background-size: cover;
+  font-family: 'KGRedHands';
+  color: rgb(3, 56, 3);
+}
+
+.navbar {
+  background-color: #749542;
+}
+
+.dropdown-menu:hover {
+  background-color: #749542;
+}
+
+.card-footer {
+  margin: 5px;
+  padding: 5px;
 }
